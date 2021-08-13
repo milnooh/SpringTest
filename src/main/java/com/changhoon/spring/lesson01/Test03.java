@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class Test03 {
 	
-	@RequestMapping("/lesson01/test03/1")
+	@RequestMapping("/lesson01/test03")
 	public String view() {
 		
 		return "lesson01/test03";
