@@ -3,10 +3,12 @@ package com.changhoon.spring.lesson02.bo;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.changhoon.spring.lesson02.dao.StoreDAO;
 import com.changhoon.spring.lesson02.model.Store;
 
+@Service
 public class StoreBO {
 	@Autowired
 	private StoreDAO storeDAO;
