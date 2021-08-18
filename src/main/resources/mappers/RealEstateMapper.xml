@@ -113,4 +113,15 @@
  			, now()
  		)
  	</insert>
+ 	
+ 	<update id="updatedRealEstae" parameterType="com.changhoon.spring.lesson03.model.RealEstate">
+ 		UPDATE
+ 			`real_estate`
+ 		SET
+ 			`price` = #{price}
+ 			, `type` = #{type}
+ 			, `updatedAt` = now()
+ 		WHERE
+ 			`id` = #{id}
+ 	</update>
  </mapper>

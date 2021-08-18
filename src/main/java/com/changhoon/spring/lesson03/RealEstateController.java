@@ -62,5 +62,19 @@ public class RealEstateController {
 		
 		return "입력결과 : " +  count;	
 	}
+	
+	// update
+	@RequestMapping("/test03")
+	@ResponseBody
+	public String test03() {
+		RealEstate realEstate = new RealEstate();
+		realEstate.setId(24);
+		realEstate.setType("전세");
+		realEstate.setPrice(70000);
+		
+		int count = realEstateBO.updatedRealEstate(realEstate);
+		
+		return "수정성공 : " + count;				
+	}
 
 }
