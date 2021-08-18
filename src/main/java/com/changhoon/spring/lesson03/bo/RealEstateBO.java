@@ -38,4 +38,9 @@ public class RealEstateBO {
 	public int updatedRealEstate(RealEstate realEstate) {
 		return realEstateDAO.updatedRealEstae(realEstate);
 	}
+	
+	// delete test04
+	public int deleteRealEstate(int id) {
+		return realEstateDAO.deleteRealEstate(id);
+	}
 }

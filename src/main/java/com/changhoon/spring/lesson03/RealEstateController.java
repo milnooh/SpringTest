@@ -76,5 +76,13 @@ public class RealEstateController {
 		
 		return "수정성공 : " + count;				
 	}
+	
+	// delete
+	@RequestMapping("/test04")
+	@ResponseBody
+	public String test04(@RequestParam("id") int id) {
+		int count = realEstateBO.deleteRealEstate(id);
+		return "삭제 개수 : " + count;
+	}
 
 }
