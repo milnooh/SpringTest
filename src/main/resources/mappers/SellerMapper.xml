@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <mapper namespace="com.changhoon.spring.lesson04.dao.SellerDAO">
+ 	<insert id="insertUser">
+ 		INSERT INTO
+ 			`seller`
+ 		(
+ 			`nickName`
+ 			, `profileImageUrl`
+ 			, `temperature`
+ 			, `createdAt`
+ 			, `updatedAt`
+ 		) VALUES (
+ 			#{nickName}
+ 			, #{profileImageUrl}
+ 			, #{temperature}
+ 			, now()
+ 			, now()
+ 		)
+ 	</insert>
+ 	
+ 	<select id="selectLastSeller" resultType="com.changhoon.spring.lesson04.model.Seller">
+ 		SELECT
+ 			`id`
+ 			, `nickName`
+ 			, `profileImageUrl`
+ 			, `temperature`
+ 			, `createdAt`
+ 			, `updatedAt`
+ 		FROM
+ 			`seller`
+ 		ORDER BY `id` DESC
+ 		LIMIT 1
+ 	
+ 	</select>
+ 
+ </mapper>
