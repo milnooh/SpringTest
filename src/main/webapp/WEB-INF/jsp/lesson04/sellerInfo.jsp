@@ -14,7 +14,8 @@
 </head>
 <body>
 <h2>판매자 정보</h2>
-<img alt="" src="${result.profileImageUrl }">
+
+<img src="${result.profileImageUrl }">
 <h1>${result.nickName }</h1>
 ${result.temperature }
 

@@ -35,11 +35,20 @@ public class SellerController {
 	}
 	
 	@GetMapping("/2")
-	public String lastSeller(Model model) {
+	public String lastSeller(@RequestParam(value = "id", required = false) int id
+			, Model model) {
 		
-		Seller seller = sellerBO.getLastSeller();
+		Seller seller = null;
+		if(id == null) {
+			seller = sellerBO.getLastSeller();
+		} else {
+			seller = sellerBO.getSeller(id);
+		}
+		
+//		Seller seller = sellerBO.getLastSeller();
+//		model.addAttribute("result", seller);
+		
 		model.addAttribute("result", seller);
-		model.addAttribute("subject", "판매자정보");
 		
 		return "lesson04/sellerInfo";
 	}

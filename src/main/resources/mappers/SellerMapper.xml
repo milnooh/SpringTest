@@ -36,5 +36,21 @@
  		LIMIT 1
  	
  	</select>
+ 	
+ 	 <select id="selectSeller" resultType="com.changhoon.spring.lesson04.model.Seller"
+ 	 parameterType="int">
+ 		SELECT
+ 			`id`
+ 			, `nickName`
+ 			, `profileImageUrl`
+ 			, `temperature`
+ 			, `createdAt`
+ 			, `updatedAt`
+ 		FROM
+ 			`seller`
+ 		WHERE
+ 			`id` = #{id}
+ 	
+ 	</select>
  
  </mapper>
