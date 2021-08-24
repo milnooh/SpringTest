@@ -39,11 +39,11 @@ public class SellerController {
 			, Model model) {
 		
 		Seller seller = null;
-		if(id == null) {
-			seller = sellerBO.getLastSeller();
-		} else {
-			seller = sellerBO.getSeller(id);
-		}
+//		if(id == null) {
+//			seller = sellerBO.getLastSeller();
+//		} else {
+//			seller = sellerBO.getSeller(id);
+//		}
 		
 //		Seller seller = sellerBO.getLastSeller();
 //		model.addAttribute("result", seller);
